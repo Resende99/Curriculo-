@@ -1,0 +1,234 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* Tema: variáveis CSS para modo claro/escuro */
+:root{
+  --bg: #f5f7fb;
+  --text: #0f1724;
+  --muted: #4b5563;
+  --card: rgba(255,255,255,0.05);
+  --modal-bg: #edeef0;
+  --accent: #3b82f6;
+}
+
+[data-theme="dark"]{
+  --bg: #071023;
+  --text: #e6eef8;
+  --muted: #9aa8bd;
+  --card: rgba(255,255,255,0.03);
+  --modal-bg: #0b1220;
+  --accent: #3b82f6;
+}
+
+body{ background: var(--bg); color: var(--text); transition: background .25s ease, color .25s ease; }
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* NAVBAR GLASS */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(232, 230, 230, 0.4);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero img {
+  width: 260px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SKILLS 3D */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 15px;
+  width: 160px;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.skill-card i {
+  font-size: 60px;
+}
+
+.skill-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+  box-shadow: 0 0 25px #3b82f6;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px #3b82f6;
+  transform: translateY(-10px);
+}
+
+/* focus styles for keyboard users */
+.project-card:focus {
+  outline: 3px solid rgba(59,130,246,0.6);
+  transform: translateY(-10px);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+}
+
+.modal-content {
+  background: var(--modal-bg);
+  padding: 40px;
+  width: 70%;
+  margin: 5% auto;
+  border-radius: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-content:focus {
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.15);
+  outline: none;
+}
+.sobre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  max-width: 600px;
+  text-align: left;
+}
+
+.sobre-destaques {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.box:hover {
+  box-shadow: 0 0 25px #3b82f6;
+  transform: scale(1.05);
+}
+p {
+  line-height: 1.8;
+  color: var(--text);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+nav h1 {
+  font-size: 22px;
+  font-family: 'Orbitron', sans-serif;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 30px;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.theme-toggle{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto; /* empurra para direita */
+  margin-right: 5px; /* mínimo espaço da borda */
+}
+.theme-toggle:focus{ outline: 3px solid rgba(59,130,246,0.25); }
+.hero {
+  padding-top: 120px;
+}

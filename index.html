@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Andrade Resende | Portfólio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Partículas -->
+<script defer src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<!-- DevIcons (logos oficiais) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header class="header">
+  <div class="logo">Samuel Andrade Resende</div>
+  <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Ativar tema escuro">🌙</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Estudante de Sistemas de Informação</h2>
+    <p>Tecnologia, Estrutura e Evolução.</p>
+  </div>
+  <img src="foto.jpg" alt="Samuel" loading="lazy">
+</section>
+
+<section id="sobre" class="section">
+  <div class="sobre-container">
+    <div class="sobre-texto">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou estudante de Sistemas de Informação com foco em desenvolvimento back-end,
+        arquitetura de sistemas e banco de dados.
+      </p>
+
+      <p>
+        Desenvolvi projetos com Java, Python (Flask), SQL e APIs REST,
+        aplicando conceitos de modelagem MER/DER, regras de negócio
+        e integração com serviços externos.
+      </p>
+
+      <p>
+        Tenho perfil analítico, disciplina de estudo contínuo
+        e busco minha primeira oportunidade de estágio em TI
+        para crescer profissionalmente e contribuir com soluções modernas.
+      </p>
+    </div>
+
+    <div class="sobre-destaques">
+      <div class="box">
+        <h3>+3</h3>
+        <p>Projetos Desenvolvidos</p>
+      </div>
+
+      <div class="box">
+        <h3>Back-End</h3>
+        <p>APIs e Banco de Dados</p>
+      </div>
+
+      <div class="box">
+        <h3>Modelagem</h3>
+        <p>MER • DER • SQL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h2>Tecnologias</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="devicon-java-plain colored"></i>
+      <p>Java</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-javascript-plain colored"></i>
+      <p>JavaScript</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-python-plain colored"></i>
+      <p>Python</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-html5-plain colored"></i>
+      <p>HTML</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-css3-plain colored"></i>
+      <p>CSS</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-sqlite-plain colored"></i>
+      <p>SQL</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projetos" class="section">
+  <h2>Projetos</h2>
+  <div class="project-grid">
+
+    <div class="project-card" tabindex="0" onclick="openModal('padaria')">
+      <h3>PadariaBot</h3>
+      <p>Chatbot com IA e processamento de documentos.</p>
+    </div>
+
+    <div class="project-card" tabindex="0" onclick="openModal('sinergia')">
+      <h3>Sinergia17 API</h3>
+      <p>API REST com persistência e ranking.</p>
+    </div>
+
+    <div class="project-card" tabindex="0" onclick="openModal('paopay')">
+      <h3>PãoPay</h3>
+      <p>Sistema completo de gestão financeira.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contato" class="section">
+  <h2>Contato</h2>
+  <p>Email: samuelcairole@gmail.com</p>
+  <p>GitHub: github.com/Resende99</p>
+  <p>LinkedIn: linkedin.com/in/samuel-andrade-resende-799b302b5</p>
+  <p>Telefone: (31) 983262487 </p>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-content" tabindex="-1">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</main>
+</body>
+</html>
